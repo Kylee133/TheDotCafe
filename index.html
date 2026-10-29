@@ -758,93 +758,221 @@ fresh ingredients to the Ames community.
 
 <section class="section project" id="project">
 
-<div class="container">
 
-<div class="label">
-IOWA STATE UNIVERSITY MARKETING PROJECT
-</div>
+<!-- SEMESTER PROJECT -->
 
-<h2>Our Semester Project</h2>
+<style>
+/* ORIGINAL EXECUTIVE SUMMARY DESIGN */
 
-<div class="project-intro">
+.project {
+  background: #f6eddf;
+  padding: 100px 0;
+}
 
-<p>
-Throughout the semester, our marketing group
-has analyzed The Dot Cafe's digital presence
-and explored ways to improve its website
-and online marketing strategy.
-</p>
+.project .label {
+  color: #71836c;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
 
-<p>
-Our goal is to make the website easier to
-navigate, improve online visibility, and
-encourage more customers to discover The Dot.
-</p>
+.project h2 {
+  max-width: 900px;
+  font-size: clamp(42px, 5vw, 68px);
+  color: #29382c;
+  margin-bottom: 26px;
+  line-height: 1.15;
+}
 
-</div>
+.project-intro {
+  max-width: 900px;
+  margin-bottom: 40px;
+}
 
-<div class="project-grid">
+.project-intro p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: #344034;
+}
 
-<div class="project-card">
-<div class="project-number">
-01 — WEBSITE AUDIT
-</div>
-<h3>Evaluating the Website</h3>
-<p>
-Our group evaluated the Home, Menu, About,
-and Contact pages, focusing on user interface,
-user experience, search engine optimization,
-and overall performance.
-</p>
-</div>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 32px;
+}
 
-<div class="project-card">
-<div class="project-number">
-02 — KEY FINDINGS
-</div>
-<h3>Identifying Improvements</h3>
-<p>
-We identified opportunities to improve
-readability, navigation, menu organization,
-calls to action, metadata, and website
-loading efficiency.
-</p>
-</div>
+.project-card {
+  background: #fffcf7;
+  border: 1px solid #e5ded3;
+  border-radius: 20px;
+  padding: 35px 30px;
+  min-height: 285px;
+}
 
-<div class="project-card">
-<div class="project-number">
-03 — WEBSITE REDESIGN
-</div>
-<h3>Improving User Experience</h3>
-<p>
-Our redesigned homepage includes clearer
-navigation, visible menu and visit buttons,
-improved text contrast, and a mobile-friendly
-layout while maintaining The Dot's aesthetic.
-</p>
-</div>
+.project-number {
+  color: #a66e60;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 14px;
+}
 
-<div class="project-card">
-<div class="project-number">
-04 — DISPLAY ADVERTISING
-</div>
-<h3>Promoting The Dot Cafe</h3>
-<p>
-Our group developed a display advertising
-campaign with targeting criteria, financial
-estimates, four creative sizes, and a dedicated
-landing page concept.
-</p>
-</div>
+.project-card h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 24px;
+  color: #29382c;
+  margin-bottom: 16px;
+}
 
-</div>
+.project-card p {
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+}
 
-<p class="project-note">
-This executive summary will be updated as
-additional assignments are completed.
-</p>
+/* GREEN EXECUTIVE SUMMARY BOX */
 
-</div>
+.executive-summary {
+  background: #e1e8d8;
+  border-left: 7px solid #71866b;
+  border-radius: 13px;
+  padding: 32px;
+}
+
+.executive-summary h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #29382c;
+}
+
+.executive-summary p {
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
+  color: #344034;
+}
+
+@media (max-width: 850px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .project {
+    padding: 65px 0;
+  }
+
+  .project-card,
+  .executive-summary {
+    padding: 25px;
+  }
+
+  .project h2 {
+    font-size: 40px;
+  }
+}
+</style>
+
+<section class="section project" id="project">
+
+  <div class="container">
+
+    <div class="label">
+      OUR MARKETING CLASS PROJECT
+    </div>
+
+    <h2>
+      Making a great café easier to discover.
+    </h2>
+
+    <div class="project-intro">
+      <p>
+        Throughout the semester, our group evaluated
+        The Dot Cafe's digital presence and developed
+        recommendations to improve the customer
+        experience, website visibility, and
+        marketing effectiveness.
+      </p>
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-number">01</div>
+
+        <h3>Website Audit</h3>
+
+        <p>
+          Reviewed user interface, user experience,
+          on-site SEO, and website performance
+          across key pages.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">02</div>
+
+        <h3>Recommendations</h3>
+
+        <p>
+          Identified opportunities to improve
+          readability, menu navigation, calls to
+          action, and page optimization.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-number">03</div>
+
+        <h3>Display Campaign</h3>
+
+        <p>
+          Designed a coordinated set of display
+          ads and a dedicated landing-page concept
+          to increase local awareness and
+          menu exploration.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="executive-summary">
+
+      <h3>Executive Summary</h3>
+
+      <p>
+        Our team conducted a website audit of
+        The Dot Cafe's Home, Menu, About, and Contact
+        pages. The website had a consistent identity
+        and generally strong technical performance,
+        but we identified areas for improvement in
+        text contrast, navigation, visible calls to
+        action, meta descriptions, menu organization,
+        and resource efficiency. Building on these
+        findings, we designed a display advertising
+        campaign featuring four ad formats and a
+        focused landing-page experience. Together,
+        these recommendations aim to help potential
+        customers discover The Dot, find what they
+        need more easily, and feel encouraged to visit.
+        This summary can be expanded as our semester
+        project progresses.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 </section>
 
 <!-- VISIT US -->
