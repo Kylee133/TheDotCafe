@@ -1,0 +1,847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>The Dot Cafe | Breakfast & Lunch in Ames, Iowa</title>
+<meta name="description" content="Discover The Dot Cafe in West Ames, Iowa: creative breakfast and lunch, local ingredients, and cozy neighborhood dining. Explore our menu and plan your visit.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,700,20,1;9..144,800,20,1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #fcf7ef;
+  --peach: #eed0c3;
+  --blush: #e9b4a5;
+  --forest: #344a39;
+  --deep: #253628;
+  --sage: #a5b397;
+  --ink: #29382c;
+  --border: #d9d9ca;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+  line-height: 1.65;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+section { scroll-margin-top: 110px; }
+
+.wrap {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fcf7efed;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  min-height: 98px;
+}
+
+.brand img {
+  width: 142px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+}
+
+.links a:hover,
+.footer-links a:hover {
+  color: #ae7464;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 13px 26px;
+  border-radius: 99px;
+  font-weight: 800;
+  text-align: center;
+  transition: transform .2s, background .2s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--forest);
+  color: white;
+}
+
+.primary:hover {
+  background: var(--deep);
+}
+
+.secondary {
+  border: 1px solid #b9c3b1;
+  background: #fffbf5;
+  color: var(--forest);
+}
+
+.secondary:hover {
+  background: #f8e6d8;
+}
+
+/* HERO SECTION */
+
+.hero {
+  padding: 84px 0 95px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg, #fffaf3, #f9ebdf
+  );
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  width: 360px;
+  height: 520px;
+  border-radius: 50%;
+  background: var(--peach);
+  top: 72px;
+  left: -265px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+}
+
+.eyebrow, .kicker {
+  color: #6f8069;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.13;
+  letter-spacing: -.035em;
+}
+
+h1 {
+  font-size: clamp(48px, 5.6vw, 79px);
+  margin: 24px 0 30px;
+}
+
+h1 em { color: #a36d5d; }
+
+.hero-copy {
+  font-size: 19px;
+  line-height: 1.9;
+  max-width: 560px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.photo-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4/4.5;
+  object-fit: cover;
+  border-radius: 240px 240px 16px 16px;
+  box-shadow: 0 20px 60px #60412a22;
+}
+
+.sticker {
+  position: absolute;
+  right: -21px;
+  bottom: 25px;
+  width: 148px;
+  height: 148px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: var(--blush);
+  border: 8px solid var(--cream);
+  border-radius: 50%;
+  font-weight: 800;
+  line-height: 1.4;
+  transform: rotate(10deg);
+}
+
+/* GENERAL SECTIONS */
+
+.section { padding: 94px 0; }
+
+.kicker {
+  color: #a36d5d;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: clamp(35px, 4.4vw, 56px);
+  margin: 0 0 26px;
+}
+
+.intro {
+  font-size: 17px;
+  line-height: 1.95;
+  max-width: 800px;
+}
+
+.center { text-align: center; }
+
+.center .intro {
+  margin: 0 auto 45px;
+}
+
+/* ABOUT SECTION */
+
+.about { background: #f0d9ca; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.logo-panel {
+  background: #fff9f0;
+  min-height: 320px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.logo-panel img {
+  width: min(360px, 100%);
+}
+
+.logo-panel small {
+  margin-top: 24px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #a36d5d;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.95;
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 42px;
+}
+
+.feature {
+  background: white;
+  padding: 38px 30px;
+  border: 1px solid #e5dccc;
+  border-radius: 20px;
+}
+
+.feature .emoji { font-size: 36px; }
+
+.feature h3 {
+  font-size: 25px;
+  margin: 18px 0 12px;
+}
+
+.feature p {
+  margin: 0;
+  color: #556355;
+}
+
+/* SEMESTER PROJECT */
+
+.project { background: #e8eddf; }
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 36px;
+}
+
+.project-card {
+  background: #fffaf2;
+  padding: 34px;
+  border: 1px solid #d2dbca;
+  border-radius: 20px;
+}
+
+.project-card .number {
+  font-size: 12px;
+  color: #a36d5d;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  font-size: 25px;
+  margin: 12px 0;
+}
+
+.project-card p {
+  margin: 0;
+  color: #425044;
+}
+
+.project-note {
+  font-size: 14px;
+  margin-top: 25px;
+  color: #5c6e58;
+  font-style: italic;
+}
+
+/* VISIT SECTION */
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.details {
+  padding: 37px;
+  border-radius: 20px;
+  background: #f4ddd0;
+}
+
+.detail { margin-bottom: 24px; }
+.detail:last-child { margin-bottom: 0; }
+
+.detail strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--forest);
+}
+
+.detail p { margin: 0; }
+
+/* FOOTER */
+
+.footer {
+  background: var(--deep);
+  color: #fff9ef;
+  padding: 46px 0 22px;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 138px;
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-weight: 700;
+}
+
+.fine-print {
+  border-top: 1px solid #647365;
+  margin-top: 32px;
+  padding-top: 18px;
+  font-size: 13px;
+  color: #d1ddcd;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 930px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero { padding: 55px 0; }
+  .hero-grid { gap: 50px; }
+
+  .photo-wrap {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .features { grid-template-columns: 1fr; }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 620px) {
+  .nav > .button { display: none; }
+
+  .brand img {
+    width: 120px;
+    height: 66px;
+  }
+
+  .links {
+    font-size: 13px;
+    gap: 12px;
+  }
+
+  .hero h1 { font-size: 46px; }
+  .hero-copy { font-size: 17px; }
+  .section { padding: 65px 0; }
+
+  .project-grid { grid-template-columns: 1fr; }
+
+  .project-card,
+  .details { padding: 25px; }
+
+  .sticker {
+    width: 112px;
+    height: 112px;
+    font-size: 12px;
+    right: -8px;
+  }
+
+  .actions .button { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header class="site-header">
+  <div class="wrap nav">
+
+    <a class="brand" href="#home"
+       aria-label="The Dot Cafe home">
+      <img src="assets/dot-logo.png"
+           alt="The Dot Cafe logo">
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#project">Semester Project</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+
+    <a class="button primary"
+       href="https://www.thedotames.com/"
+       target="_blank" rel="noopener">
+      Explore Menu ↗
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow">
+        ✳ A little something special in West Ames
+      </div>
+
+      <h1>
+        Good food.<br>
+        Good company.<br>
+        <em>Good mornings.</em>
+      </h1>
+
+      <p class="hero-copy">
+        Breakfast and lunch served all day, with
+        familiar favorites, creative twists, and
+        a cozy neighborhood atmosphere.
+      </p>
+
+      <div class="actions">
+        <a class="button primary"
+           href="https://www.thedotames.com/"
+           target="_blank" rel="noopener">
+          Explore the Menu →
+        </a>
+
+        <a class="button secondary" href="#visit">
+          Plan Your Visit
+        </a>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <img class="hero-photo"
+           src="assets/dot-food.jpg"
+           alt="Food at The Dot Cafe">
+
+      <div class="sticker">
+        BREAKFAST<br>
+        + LUNCH<br>
+        ALL DAY!
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+
+    <div class="logo-panel">
+      <img src="assets/dot-logo.png"
+           alt="The Dot Cafe script logo">
+
+      <small>GOOD FOOD · GOOD COMPANY</small>
+    </div>
+
+    <div>
+      <div class="kicker">Our Story</div>
+
+      <h2>
+        A little nostalgia.<br>
+        A lot of heart.
+      </h2>
+
+      <p>
+        Welcome to The Dot, a cozy neighborhood
+        café in West Ames, Iowa.
+      </p>
+
+      <p>
+        As a woman-owned small business, The Dot
+        combines the familiar flavors you grew up
+        with and creative, modern twists.
+      </p>
+
+      <p>
+        By partnering with local businesses and
+        prioritizing fresh ingredients, The Dot
+        provides a welcoming place for the
+        community to gather.
+      </p>
+
+      <a class="button primary" href="#visit">
+        Come Visit Us →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY THE DOT -->
+<section class="section center">
+  <div class="wrap">
+
+    <div class="kicker">Why The Dot?</div>
+
+    <h2>More than just a café.</h2>
+
+    <p class="intro">
+      Whether you're catching up with friends,
+      looking for breakfast, or discovering a
+      new local favorite, The Dot makes room for you.
+    </p>
+
+    <div class="features">
+
+      <article class="feature">
+        <div class="emoji">☕</div>
+        <h3>Cozy Atmosphere</h3>
+        <p>
+          A warm neighborhood spot for good food
+          and good company.
+        </p>
+      </article>
+
+      <article class="feature">
+        <div class="emoji">🥐</div>
+        <h3>Breakfast & Lunch</h3>
+        <p>
+          Comforting favorites with creative twists,
+          served all day during opening hours.
+        </p>
+      </article>
+
+      <article class="feature">
+        <div class="emoji">🌿</div>
+        <h3>Local Connections</h3>
+        <p>
+          Fresh ingredients and partnerships
+          with local businesses.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEMESTER EXECUTIVE SUMMARY -->
+<section class="section project" id="project">
+  <div class="wrap">
+
+    <div class="kicker">
+      Iowa State University · Marketing Project
+    </div>
+
+    <h2>Our Semester Project</h2>
+
+    <p class="intro">
+      Throughout the semester, our group evaluated
+      The Dot Cafe's online presence and developed
+      recommendations to make its website easier to
+      navigate, strengthen search visibility, and
+      encourage visits.
+    </p>
+
+    <p class="intro">
+      Our work connects website research with
+      a display advertising campaign.
+    </p>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="number">01 · Website Audit</div>
+        <h3>Evaluating the Website</h3>
+        <p>
+          We assessed the Home, Menu, About, and
+          Contact pages for user interface, user
+          experience, search engine optimization,
+          and performance.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="number">02 · Key Findings</div>
+        <h3>Finding Opportunities</h3>
+        <p>
+          Our audit identified improvements in
+          readability, navigation, calls to action,
+          menu accessibility, metadata, and
+          loading efficiency.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="number">03 · Website Redesign</div>
+        <h3>A Better Experience</h3>
+        <p>
+          We introduced clearer menu and visit
+          buttons, improved text contrast, more
+          intuitive sections, and mobile-friendly
+          layouts while keeping The Dot's
+          nostalgic style.
+        </p>
+      </article>
+
+      <article class="project-card">
+        <div class="number">04 · Display Advertising</div>
+        <h3>Growing Awareness</h3>
+        <p>
+          We designed a cohesive display campaign
+          with audience targeting, benchmark-based
+          planning, four ad formats, and a
+          dedicated landing-page concept.
+        </p>
+      </article>
+
+    </div>
+
+    <p class="project-note">
+      Student redesign concept. Update this summary
+      as additional semester work is completed.
+    </p>
+
+  </div>
+</section>
+
+<!-- VISIT US -->
+<section class="section" id="visit">
+  <div class="wrap visit-grid">
+
+    <div>
+      <div class="kicker">Come Say Hello</div>
+
+      <h2>
+        We'll save you<br>
+        a seat.
+      </h2>
+
+      <p class="intro">
+        Stop by The Dot for a cozy café experience
+        and breakfast or lunch in West Ames.
+      </p>
+
+      <div class="actions">
+        <a class="button primary"
+           href="https://www.google.com/maps/search/?api=1&query=127+Dotson+Drive+Ames+Iowa"
+           target="_blank" rel="noopener">
+          Get Directions →
+        </a>
+
+        <a class="button secondary"
+           href="https://www.thedotames.com/"
+           target="_blank" rel="noopener">
+          View the Menu
+        </a>
+      </div>
+    </div>
+
+    <div class="details">
+
+      <div class="detail">
+        <strong>📍 Location</strong>
+        <p>
+          127 Dotson Drive<br>
+          Ames, Iowa 50014
+        </p>
+      </div>
+
+      <div class="detail">
+        <strong>🕒 Hours</strong>
+        <p>
+          Wednesday–Sunday<br>
+          8:00 AM–2:00 PM<br>
+          Closed Monday & Tuesday
+        </p>
+      </div>
+
+      <div class="detail">
+        <strong>✉ Contact</strong>
+        <p>
+          <a href="mailto:thedotames@gmail.com">
+            thedotames@gmail.com
+          </a>
+          <br>
+          <a href="tel:+15154254188">
+            (515) 425-4188
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+
+    <div class="footer-main">
+      <div>
+        <img class="footer-logo"
+             src="assets/dot-logo.png"
+             alt="The Dot Cafe">
+
+        <p>
+          Good food. Good company. Good mornings.
+        </p>
+      </div>
+
+      <nav class="footer-links"
+           aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">Our Story</a>
+        <a href="#project">Semester Project</a>
+        <a href="#visit">Visit Us</a>
+      </nav>
+    </div>
+
+    <div class="fine-print">
+      © 2026 The Dot Cafe · Student marketing project
+      · Academic redesign concept, not The Dot's
+      official website
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
