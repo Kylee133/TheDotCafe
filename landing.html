@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,700&display=swap" rel="stylesheet">
 
 <style>
+
 /* COLORS AND GENERAL STYLES */
 
 :root {
@@ -157,7 +160,7 @@ header {
   transform: translateY(-3px);
 }
 
-/* LANDING PAGE HERO */
+/* ORIGINAL LANDING PAGE HERO */
 
 .hero {
   position: relative;
@@ -234,28 +237,17 @@ header {
   flex-wrap: wrap;
 }
 
-/* UPDATED HERO IMAGE STYLING */
-
 .hero-image {
   position: relative;
   min-width: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-picture {
-  display: block;
-  width: 100%;
-  max-width: 350px;
 }
 
 .hero-photo {
-  display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 18px;
+  height: 570px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 240px 240px 20px 20px;
   box-shadow: 0 20px 50px #00000018;
   background: var(--peach);
 }
@@ -270,6 +262,27 @@ header {
   right: -30px;
   top: -25px;
   z-index: -1;
+}
+
+/* ORIGINAL PINK STICKER */
+
+.hero-sticker {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  width: 155px;
+  height: 155px;
+  background: var(--pink);
+  border: 8px solid var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+  transform: rotate(10deg);
 }
 
 /* GENERAL SECTIONS */
@@ -581,10 +594,6 @@ footer {
     margin: auto;
   }
 
-  .hero-picture {
-    max-width: 350px;
-  }
-
   .features {
     grid-template-columns: 1fr;
   }
@@ -617,14 +626,15 @@ footer {
     font-size: 17px;
   }
 
-  .hero-picture {
-    max-width: 420px;
+  .hero-photo {
+    height: 420px;
   }
 
-  .hero-photo {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+  .hero-sticker {
+    width: 115px;
+    height: 115px;
+    font-size: 12px;
+    right: -8px;
   }
 
   .hero-buttons {
@@ -668,11 +678,15 @@ footer {
 
     <a class="logo" href="index.html"
        aria-label="The Dot Cafe homepage">
-      <img src="dot-logo-transparent.png"
-           alt="The Dot Cafe logo">
+
+      <img
+        src="dot-logo-transparent.png"
+        alt="The Dot Cafe logo">
+
     </a>
 
     <nav aria-label="Main navigation">
+
       <ul class="nav-links">
 
         <li>
@@ -692,13 +706,14 @@ footer {
         </li>
 
       </ul>
+
     </nav>
 
     <a class="btn btn-green"
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
-       Explore Menu ↗
+      Explore Menu ↗
     </a>
 
   </div>
@@ -706,9 +721,10 @@ footer {
 
 <main>
 
-<!-- HERO -->
+<!-- ORIGINAL HERO SECTION -->
 
 <section class="hero" id="top">
+
   <div class="container hero-grid">
 
     <div>
@@ -737,10 +753,11 @@ footer {
            href="https://www.thedotames.com/new-page"
            target="_blank"
            rel="noopener noreferrer">
-           Explore the Menu →
+          Explore the Menu →
         </a>
 
-        <a class="btn btn-outline" href="#visit">
+        <a class="btn btn-outline"
+           href="#visit">
           Plan Your Visit
         </a>
 
@@ -748,31 +765,25 @@ footer {
 
     </div>
 
-    <!-- UPDATED RESPONSIVE CAMPAIGN IMAGE -->
+    <!-- ORIGINAL PHOTO AND PINK STICKER -->
 
     <div class="hero-image">
 
-      <picture class="hero-picture">
+      <img
+        class="hero-photo"
+        src="landingphoto.png"
+        alt="Assorted breakfast and lunch dishes from The Dot Cafe">
 
-        <!-- Mobile version: 300 x 250 -->
-        <source
-          media="(max-width: 550px)"
-          srcset="dot-medium-rectangle-300x250.png">
-
-        <!-- Desktop version: 300 x 600 -->
-        <img
-          class="hero-photo"
-          src="dot-half-page-300x600.png"
-          width="300"
-          height="600"
-          alt="The Dot Cafe breakfast and lunch advertising campaign"
-          fetchpriority="high">
-
-      </picture>
+      <div class="hero-sticker">
+        BREAKFAST<br>
+        + LUNCH<br>
+        ALL DAY!
+      </div>
 
     </div>
 
   </div>
+
 </section>
 
 <!-- DISCOVER THE DOT -->
@@ -826,12 +837,13 @@ footer {
          href="https://www.thedotames.com/new-page"
          target="_blank"
          rel="noopener noreferrer">
-         See What's on the Menu →
+        See What's on the Menu →
       </a>
 
     </div>
 
   </div>
+
 </section>
 
 <!-- WHY YOU'LL LOVE THE DOT -->
@@ -862,6 +874,7 @@ footer {
     <div class="features">
 
       <div class="feature">
+
         <div class="feature-icon">🥐</div>
 
         <h3>Breakfast &amp; Lunch</h3>
@@ -871,9 +884,11 @@ footer {
           with creative twists, served throughout
           the café's opening hours.
         </p>
+
       </div>
 
       <div class="feature">
+
         <div class="feature-icon">☕</div>
 
         <h3>Cozy Atmosphere</h3>
@@ -883,9 +898,11 @@ footer {
           where you can slow down, enjoy
           your meal, and spend time together.
         </p>
+
       </div>
 
       <div class="feature">
+
         <div class="feature-icon">🌿</div>
 
         <h3>Locally Connected</h3>
@@ -895,11 +912,13 @@ footer {
           and uses fresh ingredients while
           supporting the Ames community.
         </p>
+
       </div>
 
     </div>
 
   </div>
+
 </section>
 
 <!-- CAMPAIGN MESSAGE -->
@@ -928,10 +947,11 @@ footer {
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
-       Explore the Menu →
+      Explore the Menu →
     </a>
 
   </div>
+
 </section>
 
 <!-- PLAN YOUR VISIT -->
@@ -964,14 +984,14 @@ footer {
            href="https://www.google.com/maps/search/?api=1&amp;query=127+Dotson+Drive+Ames+Iowa"
            target="_blank"
            rel="noopener noreferrer">
-           Get Directions →
+          Get Directions →
         </a>
 
         <a class="btn btn-outline"
            href="https://www.thedotames.com/new-page"
            target="_blank"
            rel="noopener noreferrer">
-           Explore the Menu
+          Explore the Menu
         </a>
 
       </div>
@@ -1010,6 +1030,7 @@ footer {
     </div>
 
   </div>
+
 </section>
 
 <!-- FINAL CALL TO ACTION -->
@@ -1032,10 +1053,11 @@ footer {
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
-       Take a Look at Our Menu →
+      Take a Look at Our Menu →
     </a>
 
   </div>
+
 </section>
 
 </main>
@@ -1060,7 +1082,8 @@ footer {
 
       </div>
 
-      <nav class="footer-links" aria-label="Footer navigation">
+      <nav class="footer-links"
+           aria-label="Footer navigation">
 
         <a href="index.html">
           Home
@@ -1077,7 +1100,7 @@ footer {
         <a href="https://www.thedotames.com/new-page"
            target="_blank"
            rel="noopener noreferrer">
-           Explore Menu
+          Explore Menu
         </a>
 
       </nav>
@@ -1085,9 +1108,11 @@ footer {
     </div>
 
     <div class="footer-bottom">
+
       © 2026 The Dot Cafe — Student Marketing Project
       <br>
       Academic website redesign and advertising campaign concept.
+
     </div>
 
   </div>
