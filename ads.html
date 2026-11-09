@@ -1,21 +1,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ads</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Dot Cafe | Display Advertising Campaign</title>
 
 <style>
+
+/* GENERAL STYLING */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 24px 16px;
+  padding: 30px 16px;
   background: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1f2a1f;
 }
+
+/* MAIN PAGE LAYOUT */
 
 .page {
   max-width: 1200px;
@@ -26,18 +35,19 @@ body {
   gap: 24px;
 }
 
-.row {
+/* AD IMAGES */
+
+.ad {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 24px;
+  max-width: 100%;
 }
 
 .ad a {
   display: block;
   line-height: 0;
   background: #fbf1e3;
+  max-width: 100%;
 }
 
 .ad img {
@@ -45,14 +55,51 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border: none;
+}
+
+/* CLICKABLE AD HOVER EFFECT */
+
+.ad a:hover {
+  opacity: 0.92;
+  transition: opacity 0.2s ease;
 }
 
 .ad a:focus-visible {
   outline: 3px solid #2f6fed;
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
-/* Center column between the two side ads */
+/* LEADERBOARD: 728 x 90 */
+
+.leaderboard {
+  width: 728px;
+}
+
+.leaderboard a {
+  width: 728px;
+  aspect-ratio: 728 / 90;
+}
+
+/* MAIN AD ROW */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+/* LEFT: WIDE SKYSCRAPER 160 x 600 */
+
+.skyscraper a {
+  width: 160px;
+  height: 600px;
+}
+
+/* CENTER COLUMN */
 
 .center-col {
   display: flex;
@@ -63,36 +110,51 @@ body {
   max-width: 100%;
 }
 
+/* CENTER: MEDIUM RECTANGLE 300 x 250 */
+
+.rectangle a {
+  width: 300px;
+  height: 250px;
+}
+
+/* RIGHT: HALF PAGE 300 x 600 */
+
+.halfpage a {
+  width: 300px;
+  height: 600px;
+}
+
+/* CAMPAIGN HEADING */
+
+.page-heading {
+  text-align: center;
+  width: 100%;
+}
+
+.page-heading h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #4a6b4a;
+}
+
+.page-heading p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* CAMPAIGN STRATEGY BOX */
+
 .strategy {
   width: 100%;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: #1f2a1f;
   background: #fbf1e3;
   border-radius: 12px;
   padding: 20px 22px;
   line-height: 1.5;
 }
 
-.page-heading {
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: #1f2a1f;
-}
-
-.page-heading h1 {
-  margin: 0 0 6px;
-  font-size: 2rem;
-  color: #4a6b4a;
-}
-
-.page-heading p {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
 .strategy h3 {
   margin: 0 0 6px;
-  font-size: 1.15rem;
+  font-size: 19px;
   color: #4a6b4a;
 }
 
@@ -103,128 +165,251 @@ body {
 .strategy ul {
   margin: 0;
   padding-left: 20px;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
 .strategy li {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
-/* EXACT ORIGINAL AD SIZES */
+/* TABLET AND MOBILE RESPONSIVENESS */
 
-.leaderboard {
-  width: 728px;
-  max-width: 100%;
+@media (max-width: 950px) {
+
+  .row {
+    gap: 24px;
+  }
+
+  .center-col {
+    width: 420px;
+    max-width: 100%;
+  }
+
 }
 
-.leaderboard a {
-  aspect-ratio: 728 / 90;
+@media (max-width: 600px) {
+
+  body {
+    padding: 20px 12px;
+  }
+
+  .page {
+    gap: 22px;
+  }
+
+  .page-heading h1 {
+    font-size: 27px;
+  }
+
+  .page-heading p {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .center-col {
+    width: 100%;
+    order: 1;
+  }
+
+  .skyscraper {
+    order: 2;
+  }
+
+  .halfpage {
+    order: 3;
+  }
+
+  .strategy {
+    padding: 20px;
+  }
+
 }
 
-.skyscraper a {
-  width: 160px;
-  height: 600px;
-}
-
-.rectangle a {
-  width: 300px;
-  height: 250px;
-}
-
-.halfpage a {
-  width: 300px;
-  height: 600px;
-}
 </style>
+
 </head>
 
 <body>
+
 <div class="page">
 
-  <!-- Leaderboard 728x90 -->
+  <!-- =========================
+       AD 1: LEADERBOARD 728 x 90
+  ========================= -->
+
   <div class="ad leaderboard">
-    <a href="landing.html">
+
+    <a href="landing.html"
+       aria-label="Discover The Dot Cafe">
+
       <img
         src="dot-leaderboard-728x90.png"
-        alt="The Dot. Breakfast and lunch all day! Cozy cafe in West Ames. Explore the menu.">
+        width="728"
+        height="90"
+        alt="The Dot Cafe display advertisement - leaderboard">
+
     </a>
+
   </div>
 
-  <!-- Campaign Strategy Heading -->
+
+  <!-- =========================
+       CAMPAIGN STRATEGY HEADING
+  ========================= -->
+
   <header class="page-heading">
+
     <h1>Campaign Strategy</h1>
+
     <p>
       <strong>Primary Campaign Goal:</strong>
       Increase brand awareness
     </p>
+
   </header>
+
+
+  <!-- =========================
+       MAIN THREE-COLUMN LAYOUT
+  ========================= -->
 
   <div class="row">
 
-    <!-- Wide Skyscraper 160x600 -->
+
+    <!-- =========================
+         AD 2: WIDE SKYSCRAPER
+         160 x 600
+    ========================= -->
+
     <div class="ad skyscraper">
-      <a href="landing.html">
+
+      <a href="landing.html"
+         aria-label="Discover The Dot Cafe">
+
         <img
           src="dot-wide-skyscraper-160x600.png"
-          alt="The Dot. Breakfast and lunch all day! Cozy cafe in West Ames. Explore the menu.">
+          width="160"
+          height="600"
+          alt="The Dot Cafe display advertisement - skyscraper">
+
       </a>
+
     </div>
 
-    <!-- Center Column -->
+
+    <!-- =========================
+         CENTER COLUMN
+    ========================= -->
+
     <div class="center-col">
 
-      <!-- Medium Rectangle 300x250 -->
+
+      <!-- =========================
+           AD 3: MEDIUM RECTANGLE
+           300 x 250
+      ========================= -->
+
       <div class="ad rectangle">
-        <a href="landing.html">
+
+        <a href="landing.html"
+           aria-label="Discover The Dot Cafe">
+
           <img
             src="dot-medium-rectangle-300x250.png"
-            alt="The Dot. Breakfast and lunch all day! Cozy cafe in West Ames. Explore the menu.">
+            width="300"
+            height="250"
+            alt="The Dot Cafe display advertisement - medium rectangle">
+
         </a>
+
       </div>
 
-      <!-- Original Campaign Strategy -->
+
+      <!-- =========================
+           CAMPAIGN INFORMATION
+      ========================= -->
+
       <section class="strategy">
 
         <h3>Target Audience</h3>
+
         <ul>
           <li>Middle-aged, retired families and women</li>
           <li>Facebook</li>
           <li>Discover Ames</li>
         </ul>
 
+
         <h3>The Hook</h3>
+
         <ul>
           <li>Breakfast + Lunch Served All Day</li>
         </ul>
 
+
         <h3>Financial Estimates</h3>
+
         <ul>
-          <li>Average CPM (Facebook): $2.82-$8.00</li>
-          <li>Average CTR (Facebook): 1.44%</li>
-          <li>Average CVR (Facebook): 1.89%-2.02%</li>
-          <li>Estimated required budget: $500</li>
+          <li>
+            Average CPM (Facebook): $2.82-$8.00
+          </li>
+
+          <li>
+            Average CTR (Facebook): 1.44%
+          </li>
+
+          <li>
+            Average CVR (Facebook): 1.89%-2.02%
+          </li>
+
+          <li>
+            Estimated required budget: $500
+          </li>
+
           <li>
             Expected campaign outcomes:
             62,500–177,305 impressions,
             900–2,559 clicks,
             and 17–52 conversions
           </li>
+
         </ul>
 
       </section>
 
     </div>
 
-    <!-- Half Page 300x600 -->
+
+    <!-- =========================
+         AD 4: HALF PAGE
+         300 x 600
+    ========================= -->
+
     <div class="ad halfpage">
-      <a href="landing.html">
+
+      <a href="landing.html"
+         aria-label="Discover The Dot Cafe">
+
         <img
           src="dot-half-page-300x600.png"
-          alt="The Dot. Breakfast and lunch all day! Cozy cafe in West Ames. Explore the menu.">
+          width="300"
+          height="600"
+          alt="The Dot Cafe display advertisement - half page">
+
       </a>
+
     </div>
 
+
   </div>
+
 </div>
+
 </body>
+
 </html>
