@@ -17,7 +17,9 @@
 
 <style>
 
-/* COLORS AND GENERAL STYLES */
+/* =========================
+   GENERAL STYLING
+========================= */
 
 :root {
   --cream: #FCF7EF;
@@ -72,7 +74,9 @@ section {
   scroll-margin-top: 110px;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 header {
   background: #FCF7EF;
@@ -114,7 +118,9 @@ header {
   color: var(--rose);
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .btn {
   display: inline-flex;
@@ -160,7 +166,9 @@ header {
   transform: translateY(-3px);
 }
 
-/* ORIGINAL LANDING PAGE HERO */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
   position: relative;
@@ -237,59 +245,53 @@ header {
   flex-wrap: wrap;
 }
 
+/* =========================
+   NEW AD IMAGE
+   REPLACES ORIGINAL PHOTO
+========================= */
+
 .hero-image {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 0;
+  width: 100%;
 }
 
+/*
+  The new ad includes its own artwork,
+  pink decorative elements and text.
+
+  Keep the whole image visible with
+  its original proportions.
+*/
 
 .hero-photo {
   display: block;
   width: 100%;
-  max-width: 430px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
+  object-position: center;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 18px;
   box-shadow: 0 20px 50px #00000018;
   background: transparent;
 }
 
-
-.hero-image::before {
-  content: "";
-  position: absolute;
-  background: var(--sage);
-  width: 145px;
-  height: 145px;
-  border-radius: 50%;
-  right: -30px;
-  top: -25px;
-  z-index: -1;
-}
-
-/* ORIGINAL PINK STICKER */
+/*
+  Hide the old sticker because
+  the new image already has text.
+*/
 
 .hero-sticker {
-  position: absolute;
-  bottom: 30px;
-  right: -20px;
-  width: 155px;
-  height: 155px;
-  background: var(--pink);
-  border: 8px solid var(--cream);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.5;
-  transform: rotate(10deg);
+  display: none;
 }
 
-/* GENERAL SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
   padding: 100px 0;
@@ -315,7 +317,9 @@ header {
   max-width: 820px;
 }
 
-/* DISCOVER THE DOT */
+/* =========================
+   DISCOVER THE DOT
+========================= */
 
 .discover {
   background: #F0D9CA;
@@ -374,7 +378,9 @@ header {
   margin-bottom: 20px;
 }
 
-/* WHY THE DOT */
+/* =========================
+   WHY THE DOT
+========================= */
 
 .why {
   background: var(--cream);
@@ -423,7 +429,9 @@ header {
   line-height: 1.9;
 }
 
-/* CAMPAIGN MESSAGE BANNER */
+/* =========================
+   CAMPAIGN BANNER
+========================= */
 
 .campaign-banner {
   background: #E5EBD9;
@@ -447,7 +455,9 @@ header {
   margin: 0 auto 30px;
 }
 
-/* PLAN YOUR VISIT */
+/* =========================
+   PLAN YOUR VISIT
+========================= */
 
 .visit {
   background: #FFF9F2;
@@ -489,7 +499,9 @@ header {
   margin-bottom: 0;
 }
 
-/* FINAL CALL TO ACTION */
+/* =========================
+   FINAL CTA
+========================= */
 
 .final-cta {
   background: var(--green);
@@ -524,7 +536,9 @@ header {
   color: #E2E9DF;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   background: var(--dark);
@@ -571,7 +585,9 @@ footer {
   color: #C8D4C4;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
 
 @media (max-width: 950px) {
 
@@ -594,8 +610,13 @@ footer {
 
   .hero-image {
     width: 100%;
-    max-width: 580px;
+    max-width: 520px;
     margin: auto;
+  }
+
+  .hero-photo {
+    max-width: 480px;
+    height: auto;
   }
 
   .features {
@@ -606,7 +627,12 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+
 }
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
 
 @media (max-width: 550px) {
 
@@ -631,14 +657,11 @@ footer {
   }
 
   .hero-photo {
-    height: 420px;
-  }
-
-  .hero-sticker {
-    width: 115px;
-    height: 115px;
-    font-size: 12px;
-    right: -8px;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
   }
 
   .hero-buttons {
@@ -668,6 +691,7 @@ footer {
   .footer-brand img {
     height: 56px;
   }
+
 }
 
 </style>
@@ -675,12 +699,16 @@ footer {
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header>
+
   <div class="container navbar">
 
-    <a class="logo" href="index.html"
+    <a class="logo"
+       href="index.html"
        aria-label="The Dot Cafe homepage">
 
       <img
@@ -717,19 +745,26 @@ footer {
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
+
       Explore Menu ↗
+
     </a>
 
   </div>
+
 </header>
 
 <main>
 
-<!-- ORIGINAL HERO SECTION -->
+<!-- =========================
+     HERO SECTION
+========================= -->
 
 <section class="hero" id="top">
 
   <div class="container hero-grid">
+
+    <!-- LEFT SIDE TEXT -->
 
     <div>
 
@@ -744,11 +779,13 @@ footer {
       </h1>
 
       <p class="hero-description">
+
         Discover The Dot Cafe, where nostalgic
         comfort food meets creative flavors.
         Enjoy a cozy atmosphere, fresh ingredients,
         and a welcoming neighborhood experience
         right here in Ames, Iowa.
+
       </p>
 
       <div class="hero-buttons">
@@ -757,30 +794,36 @@ footer {
            href="https://www.thedotames.com/new-page"
            target="_blank"
            rel="noopener noreferrer">
+
           Explore the Menu →
+
         </a>
 
         <a class="btn btn-outline"
            href="#visit">
+
           Plan Your Visit
+
         </a>
 
       </div>
 
     </div>
 
-    <!-- ORIGINAL PHOTO AND PINK STICKER -->
 
-    
-<div class="hero-image">
-  <img
-    class="hero-photo"
-    src="dot-landing-ad.png"
-    width="300"
-    height="250"
-    alt="The Dot Cafe Breakfast and Lunch All Day advertisement">
-</div>
+    <!-- =========================
+         NEW DOT CAFE AD IMAGE
+         REPLACES ORIGINAL PHOTO
+    ========================= -->
 
+    <div class="hero-image">
+
+      <img
+        class="hero-photo"
+        src="dot-landing-ad.png"
+        width="300"
+        height="250"
+        alt="The Dot Cafe Breakfast and Lunch All Day advertisement featuring a sandwich and coffee">
 
     </div>
 
@@ -788,7 +831,10 @@ footer {
 
 </section>
 
-<!-- DISCOVER THE DOT -->
+
+<!-- =========================
+     DISCOVER THE DOT
+========================= -->
 
 <section class="section discover" id="discover">
 
@@ -839,7 +885,9 @@ footer {
          href="https://www.thedotames.com/new-page"
          target="_blank"
          rel="noopener noreferrer">
+
         See What's on the Menu →
+
       </a>
 
     </div>
@@ -848,7 +896,10 @@ footer {
 
 </section>
 
-<!-- WHY YOU'LL LOVE THE DOT -->
+
+<!-- =========================
+     WHY THE DOT
+========================= -->
 
 <section class="section why" id="why">
 
@@ -865,10 +916,12 @@ footer {
       </h2>
 
       <p class="section-description">
+
         Whether you're catching up with friends,
         looking for a weekend breakfast spot,
         or discovering a new local favorite,
         The Dot offers a welcoming experience.
+
       </p>
 
     </div>
@@ -923,7 +976,10 @@ footer {
 
 </section>
 
-<!-- CAMPAIGN MESSAGE -->
+
+<!-- =========================
+     CAMPAIGN MESSAGE
+========================= -->
 
 <section class="campaign-banner">
 
@@ -939,24 +995,31 @@ footer {
     </h2>
 
     <p>
+
       From comforting breakfast classics
       to creative lunch favorites, discover
       a café that makes every visit
       feel a little more special.
+
     </p>
 
     <a class="btn btn-green"
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
+
       Explore the Menu →
+
     </a>
 
   </div>
 
 </section>
 
-<!-- PLAN YOUR VISIT -->
+
+<!-- =========================
+     PLAN YOUR VISIT
+========================= -->
 
 <section class="section visit" id="visit">
 
@@ -974,10 +1037,12 @@ footer {
       </h2>
 
       <p class="visit-description">
+
         Whether you're a longtime Ames resident
         or visiting The Dot for the first time,
         we'd love for you to stop by and
         enjoy what makes our café special.
+
       </p>
 
       <div class="hero-buttons">
@@ -986,14 +1051,18 @@ footer {
            href="https://www.google.com/maps/search/?api=1&amp;query=127+Dotson+Drive+Ames+Iowa"
            target="_blank"
            rel="noopener noreferrer">
+
           Get Directions →
+
         </a>
 
         <a class="btn btn-outline"
            href="https://www.thedotames.com/new-page"
            target="_blank"
            rel="noopener noreferrer">
+
           Explore the Menu
+
         </a>
 
       </div>
@@ -1020,13 +1089,17 @@ footer {
       <h3>✉ CONTACT</h3>
 
       <p>
+
         <a href="mailto:thedotames@gmail.com">
           thedotames@gmail.com
         </a>
+
         <br>
+
         <a href="tel:+15154254188">
           (515) 425-4188
         </a>
+
       </p>
 
     </div>
@@ -1035,7 +1108,10 @@ footer {
 
 </section>
 
-<!-- FINAL CALL TO ACTION -->
+
+<!-- =========================
+     FINAL CALL TO ACTION
+========================= -->
 
 <section class="final-cta">
 
@@ -1046,16 +1122,20 @@ footer {
     </h2>
 
     <p>
+
       Good food, friendly faces, and a cozy
       neighborhood atmosphere are waiting
       for you in West Ames.
+
     </p>
 
     <a class="btn btn-light"
        href="https://www.thedotames.com/new-page"
        target="_blank"
        rel="noopener noreferrer">
+
       Take a Look at Our Menu →
+
     </a>
 
   </div>
@@ -1064,7 +1144,10 @@ footer {
 
 </main>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1112,8 +1195,11 @@ footer {
     <div class="footer-bottom">
 
       © 2026 The Dot Cafe — Student Marketing Project
+
       <br>
-      Academic website redesign and advertising campaign concept.
+
+      Academic website redesign and advertising
+      campaign concept.
 
     </div>
 
